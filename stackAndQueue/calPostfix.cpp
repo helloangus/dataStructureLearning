@@ -1,5 +1,5 @@
-#include "define.h"
-#include "include.h"
+#include "../include/include.h"
+#include "../include/define.h"
 
 float calPostfix(char postfix[])
 {

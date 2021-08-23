@@ -1,5 +1,5 @@
-#include "include.h"
-#include "define.h"
+#include "../include/include.h"
+#include "../include/define.h"
 
 int calStackTopTwo(float s1[], int &top1, char s2[], int &top2);
 

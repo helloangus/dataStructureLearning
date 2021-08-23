@@ -1,5 +1,5 @@
-#include "include.h"
-#include "define.h"
+#include "../include/include.h"
+#include "../include/define.h"
 
 int main()
 {
@@ -9,8 +9,8 @@ int main()
     float result;
 
     cout<<endl;
-    cin>>postfix;
-    result = calPostfix(postfix);
+    cin>>infix;
+    result = calInfix(infix);
     cout<<result<<endl;
 
     return 0;

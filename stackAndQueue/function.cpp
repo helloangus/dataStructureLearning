@@ -1,5 +1,5 @@
-#include "include.h"
-#include "define.h"
+#include "../include/include.h"
+#include "../include/define.h"
 
 /* 基本四则运算的优先级判断 */
 int getPriority(char op)

@@ -1,5 +1,5 @@
-#include "define.h"
-#include "include.h"
+#include "../include/include.h"
+#include "../include/define.h"
 
 /* 中缀转前缀，s2为结果栈，top2为栈顶指针 */
 int infixToPreFix(char infix[], char s2[], int &top2)
