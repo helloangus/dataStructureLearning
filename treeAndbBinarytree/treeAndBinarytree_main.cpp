@@ -32,7 +32,7 @@ int main()
 
     cout<<endl;
 
-    level(A);
+    cout<<getWidth(B)<<endl;
 
     cout<<endl;
 

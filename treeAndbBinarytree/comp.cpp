@@ -11,16 +11,16 @@ int comp(BTNode *p)
     {
         // 生成两个中间变量
         int opandA, opandB;
-        // 若不是叶子节点
+        // 若不是叶子结点
         if (p->lchild != NULL && p->rchild != NULL)
         {
-            // 计算（返回）两个孩子节点的值
+            // 计算（返回）两个孩子结点的值
             opandA = comp(p->lchild);
             opandB = comp(p->rchild);
-            // 计算当前节点的值，并返回    
+            // 计算当前结点的值，并返回    
             return op(opandA, opandB, p->data);
         }
-        // 否则返回该节点的值
+        // 否则返回该结点的值
         else
         {
             return p->data - '0';

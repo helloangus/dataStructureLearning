@@ -20,6 +20,7 @@ void prefixOrderTravelling(BTNode *p);
 void infixOrderTravelling(BTNode *p);
 void postfixOrderTravelling(BTNode *p);
 void level(BTNode *p);
+int getWidth(BTNode *p);
 
 
 int comp(BTNode *p);
