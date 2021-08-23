@@ -3,6 +3,7 @@
 #include "../include/define.h"
 using namespace std;
 
+/* 栈与队列 */
 int infixToPreFix(char infix[], char s2[], int &top2);
 int infixToPostFix(char infix[], char s2[], int &top2);
 float calPrefix(char prefix[]);
@@ -18,6 +19,9 @@ void visit(BTNode *p);
 void prefixOrderTravelling(BTNode *p);
 void infixOrderTravelling(BTNode *p);
 void postfixOrderTravelling(BTNode *p);
+void level(BTNode *p);
 
 
 int comp(BTNode *p);
+int getDepth(BTNode *p);
+void search(BTNode *p, BTNode *&q, int key);

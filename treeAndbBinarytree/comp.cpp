@@ -3,6 +3,7 @@
 
 int op(int opandA,int opandB, char op);
 
+// 计算操作数为一位整数的存储在二叉树中表达式的值
 int comp(BTNode *p)
 {
     // 判断是否为空树
@@ -33,6 +34,7 @@ int comp(BTNode *p)
 }
 
 
+// 整数运算，不判断除数是否为0
 int op(int opandA, int opandB, char op)
 {
     if (op == '+')

@@ -31,7 +31,10 @@ int main()
     I->lchild = NULL; I->rchild = NULL;
 
     cout<<endl;
-    cout<<comp(A)<<endl;
+
+    level(A);
+
+    cout<<endl;
 
     return 0;
 }

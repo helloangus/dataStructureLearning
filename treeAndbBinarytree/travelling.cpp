@@ -37,3 +37,41 @@ void postfixOrderTravelling(BTNode *p)
     }
     
 }
+
+void level(BTNode *p)
+{
+    // 树非空
+    if (p != NULL)
+    {
+        // 建立循环队列
+        int front, rear;
+        BTNode *que[maxSize];
+        front = rear = 0;
+        // 出队元素指针
+        BTNode *q;
+        // 根节点入队
+        rear = (rear + 1) % maxSize;
+        que[rear] = p;
+        // 队列不空时循环
+        while (rear != front)
+        {
+            // 出队元素
+            front = (front + 1) % maxSize;
+            q = que[front];
+            // 访问元素
+            visit(q);
+            // 若左子树存在，则左子树根节点入队
+            if (q->lchild != NULL)
+            {
+                rear = (rear + 1) % maxSize;
+                que[rear] = q->lchild;
+            }
+            // 若右子树存在，则右子树根节点入队
+            if (q->rchild)
+            {
+                rear = (rear + 1) % maxSize;
+                que[rear] = q->rchild;
+            }
+        }
+    }
+}
