@@ -18,3 +18,6 @@ void visit(BTNode *p);
 void prefixOrderTravelling(BTNode *p);
 void infixOrderTravelling(BTNode *p);
 void postfixOrderTravelling(BTNode *p);
+
+
+int comp(BTNode *p);

@@ -5,6 +5,7 @@ void prefixOrderTravelling(BTNode *p)
 {
     if (p != NULL)
     {
+        // 访问根节点
         visit(p);
 
         prefixOrderTravelling(p->lchild);  // 先序遍历左子树
@@ -17,9 +18,10 @@ void infixOrderTravelling(BTNode *p)
 {
     if (p != NULL)
     {
-        infixOrderTravelling(p->lchild);  // 先序遍历左子树
+        infixOrderTravelling(p->lchild);  // 中序遍历左子树
+        // 访问根节点
         visit(p);
-        infixOrderTravelling(p->rchild);  // 先序遍历右子树
+        infixOrderTravelling(p->rchild);  // 中序遍历右子树
     }
     
 }
@@ -28,8 +30,9 @@ void postfixOrderTravelling(BTNode *p)
 {
     if (p != NULL)
     {       
-        postfixOrderTravelling(p->lchild);  // 先序遍历左子树
-        postfixOrderTravelling(p->rchild);  // 先序遍历右子树
+        postfixOrderTravelling(p->lchild);  // 后序遍历左子树
+        postfixOrderTravelling(p->rchild);  // 后序遍历右子树
+        // 访问根节点
         visit(p);
     }
     
