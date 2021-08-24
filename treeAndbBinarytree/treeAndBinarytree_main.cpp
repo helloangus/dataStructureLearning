@@ -32,7 +32,7 @@ int main()
 
     cout<<endl;
 
-    cout<<getWidth(B)<<endl;
+    postfixOrderNonrecursion(A);
 
     cout<<endl;
 

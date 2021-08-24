@@ -3,6 +3,7 @@
 #include "../include/define.h"
 using namespace std;
 
+
 /* 栈与队列 */
 int infixToPreFix(char infix[], char s2[], int &top2);
 int infixToPostFix(char infix[], char s2[], int &top2);
@@ -14,6 +15,7 @@ int calExpLength(char exp[]);
 int getPriority(char opt);
 int calSub(float opand1, char op, float opand2, float &result);
 
+
 /* 树与二叉树 */
 void visit(BTNode *p);
 void prefixOrderTravelling(BTNode *p);
@@ -22,6 +24,9 @@ void postfixOrderTravelling(BTNode *p);
 void level(BTNode *p);
 int getWidth(BTNode *p);
 
+void prefixOrderNonrecursion(BTNode *bt);
+void infixOrderNonrecursion(BTNode *bt);
+void postfixOrderNonrecursion(BTNode *bt);
 
 int comp(BTNode *p);
 int getDepth(BTNode *p);

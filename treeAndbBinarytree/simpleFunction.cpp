@@ -2,10 +2,10 @@
 #include "../include/define.h"
 
 // 计算二叉树深度
-int getDepth(BTNode *p)
+int getDepth(BTNode *bt)
 {
     // 当是空树时，返回深度0
-    if (p == NULL)
+    if (bt == NULL)
     {
         return 0;
     }
@@ -13,8 +13,8 @@ int getDepth(BTNode *p)
     {
         // 计算左右子树的深度
         int LD, RD;
-        LD = getDepth(p->lchild);
-        RD = getDepth(p->rchild);
+        LD = getDepth(bt->lchild);
+        RD = getDepth(bt->rchild);
         // 返回左右子树最大深度加一
         return ((LD>=RD) ? LD : RD) + 1;
     }
@@ -23,7 +23,7 @@ int getDepth(BTNode *p)
 
 
 // 求二叉树的宽度和深度（具有结点数最多的那层的结点个数）
-int getWidth(BTNode *p)
+int getWidth(BTNode *bt)
 {
     // 新增一个可以存储结点层号的结构体
     typedef struct
@@ -33,7 +33,7 @@ int getWidth(BTNode *p)
     }St;
 
     // 二叉树非空时
-    if (p != NULL)
+    if (bt != NULL)
     {
         // 生成一个足够长的非循环队列
         St que[maxSize];
@@ -44,7 +44,7 @@ int getWidth(BTNode *p)
         BTNode *q;
         // 树根入列
         ++rear;
-        que[rear].p = p;
+        que[rear].p = bt;
         // 树根层号设为1
         que[rear].lno = 1;
         // 队列非空时循环
@@ -99,25 +99,64 @@ int getWidth(BTNode *p)
 }
 
 
+void level(BTNode *bt)
+{
+    // 树非空
+    if (bt != NULL)
+    {
+        // 建立循环队列
+        BTNode *que[maxSize];
+        int front, rear;
+        front = rear = 0;
+        // 出队元素指针
+        BTNode *q;
+        // 根结点入队
+        rear = (rear + 1) % maxSize;
+        que[rear] = bt;
+        // 队列不空时循环
+        while (rear != front)
+        {
+            // 出队元素
+            front = (front + 1) % maxSize;
+            q = que[front];
+            // 访问元素
+            visit(q);
+            // 若左子树存在，则左子树根结点入队
+            if (q->lchild != NULL)
+            {
+                rear = (rear + 1) % maxSize;
+                que[rear] = q->lchild;
+            }
+            // 若右子树存在，则右子树根结点入队
+            if (q->rchild)
+            {
+                rear = (rear + 1) % maxSize;
+                que[rear] = q->rchild;
+            }
+        }
+    }
+}
+
+
 // 带剪枝操作的结点搜索函数（即仅在左子树中未找到时才在右子树中查找）
-void search(BTNode *p, BTNode *&q, int key)
+void search(BTNode *bt, BTNode *&q, int key)
 {
     // 若为空树，保持不变（不可以返回NULL，因为在叶子结点的孩子结点中搜索的时候必为空树，可能重置q）
-    if (p != NULL)
+    if (bt != NULL)
     {
-        // 若当前结点hit，p赋值给q
-        if (p->data == key)
+        // 若当前结点hit，bt赋值给q
+        if (bt->data == key)
         {
-            q = p;
+            q = bt;
         }
         else
         {
             // 现在左子树中查找
-            search(p->lchild, q, key);
+            search(bt->lchild, q, key);
             // 若未找到，则继续在右子树中查找        
             if (q == NULL)
             {
-                search(p->rchild, q, key);
+                search(bt->rchild, q, key);
             }
             
         }

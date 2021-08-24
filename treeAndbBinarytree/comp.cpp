@@ -4,26 +4,26 @@
 int op(int opandA,int opandB, char op);
 
 // 计算操作数为一位整数的存储在二叉树中表达式的值
-int comp(BTNode *p)
+int comp(BTNode *bt)
 {
     // 判断是否为空树
-    if (p !=NULL)
+    if (bt !=NULL)
     {
         // 生成两个中间变量
         int opandA, opandB;
         // 若不是叶子结点
-        if (p->lchild != NULL && p->rchild != NULL)
+        if (bt->lchild != NULL && bt->rchild != NULL)
         {
             // 计算（返回）两个孩子结点的值
-            opandA = comp(p->lchild);
-            opandB = comp(p->rchild);
+            opandA = comp(bt->lchild);
+            opandB = comp(bt->rchild);
             // 计算当前结点的值，并返回    
-            return op(opandA, opandB, p->data);
+            return op(opandA, opandB, bt->data);
         }
         // 否则返回该结点的值
         else
         {
-            return p->data - '0';
+            return bt->data - '0';
         }
     }
     // 若为空则返回0
