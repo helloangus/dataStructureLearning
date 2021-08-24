@@ -5,15 +5,15 @@
 int main()
 {
     /* 构造一个简单的二叉树 */
-    BTNode *A = (BTNode*)malloc(sizeof(BTNode));
-    BTNode *B = (BTNode*)malloc(sizeof(BTNode));
-    BTNode *C = (BTNode*)malloc(sizeof(BTNode));
-    BTNode *D = (BTNode*)malloc(sizeof(BTNode));
-    BTNode *E = (BTNode*)malloc(sizeof(BTNode));
-    BTNode *F = (BTNode*)malloc(sizeof(BTNode));
-    BTNode *G = (BTNode*)malloc(sizeof(BTNode));
-    BTNode *H = (BTNode*)malloc(sizeof(BTNode));
-    BTNode *I = (BTNode*)malloc(sizeof(BTNode));
+    TBTNode *A = (TBTNode*)malloc(sizeof(TBTNode));
+    TBTNode *B = (TBTNode*)malloc(sizeof(TBTNode));
+    TBTNode *C = (TBTNode*)malloc(sizeof(TBTNode));
+    TBTNode *D = (TBTNode*)malloc(sizeof(TBTNode));
+    TBTNode *E = (TBTNode*)malloc(sizeof(TBTNode));
+    TBTNode *F = (TBTNode*)malloc(sizeof(TBTNode));
+    TBTNode *G = (TBTNode*)malloc(sizeof(TBTNode));
+    TBTNode *H = (TBTNode*)malloc(sizeof(TBTNode));
+    TBTNode *I = (TBTNode*)malloc(sizeof(TBTNode));
     
     A->data = '*';
     B->data = '-'; C->data = '/';
@@ -30,9 +30,21 @@ int main()
     H->lchild = NULL; H->rchild = NULL;
     I->lchild = NULL; I->rchild = NULL;
 
+
+    A->ltag = 0; A->rtag = 0;
+    B->ltag = 0; B->rtag = 0;
+    C->ltag = 0; C->rtag = 0;
+    D->ltag = 0; D->rtag = 0;
+    E->ltag = 0; E->rtag = 0;
+    F->ltag = 0; F->rtag = 0;
+    G->ltag = 0; G->rtag = 0;
+    H->ltag = 0; H->rtag = 0;
+    I->ltag = 0; I->rtag = 0;
+
     cout<<endl;
 
-    postfixOrderNonrecursion(A);
+    createInTread(A);
+    inTreadTravelling(A);
 
     cout<<endl;
 

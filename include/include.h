@@ -17,17 +17,20 @@ int calSub(float opand1, char op, float opand2, float &result);
 
 
 /* 树与二叉树 */
-void visit(BTNode *p);
+void visitBTNode(BTNode *p);
 void prefixOrderTravelling(BTNode *p);
 void infixOrderTravelling(BTNode *p);
 void postfixOrderTravelling(BTNode *p);
 void level(BTNode *p);
 int getWidth(BTNode *p);
 
-void prefixOrderNonrecursion(BTNode *bt);
-void infixOrderNonrecursion(BTNode *bt);
-void postfixOrderNonrecursion(BTNode *bt);
+void prefixOrderNonrecursion(BTNode *p);
+void infixOrderNonrecursion(BTNode *p);
+void postfixOrderNonrecursion(BTNode *p);
 
 int comp(BTNode *p);
 int getDepth(BTNode *p);
 void search(BTNode *p, BTNode *&q, int key);
+
+void createInTread(TBTNode *root);
+void inTreadTravelling(TBTNode *root);

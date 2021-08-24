@@ -1,7 +1,6 @@
 #ifndef _GLOBALDEFINE_
 #define _GLOBALDEFINE_
 
-
 #define maxSize 25
 #define MIN 1e-6
 
@@ -20,5 +19,17 @@ typedef struct BTNode
     struct BTNode *lchild;
     struct BTNode *rchild;
 }BTNode;
+
+
+/* 线索二叉树结点定义 */
+typedef struct TBTNode
+{
+    char data;
+    int ltag, rtag;
+    struct TBTNode *lchild;
+    struct TBTNode *rchild;    
+}TBTNode;
+
+
 
 #endif
