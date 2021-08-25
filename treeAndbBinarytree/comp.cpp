@@ -1,4 +1,4 @@
-#include "../include/include.h"
+#include "treeAndBinarytree.h"
 #include "../include/define.h"
 
 int op(int opandA,int opandB, char op);

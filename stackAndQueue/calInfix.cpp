@@ -1,4 +1,4 @@
-#include "../include/include.h"
+#include "stackAndQueue.h"
 #include "../include/define.h"
 
 int calStackTopTwo(float s1[], int &top1, char s2[], int &top2);

@@ -1,4 +1,4 @@
-#include "../include/include.h"
+#include "treeAndBinarytree.h"
 #include "../include/define.h"
 
 
@@ -41,10 +41,13 @@ int main()
     H->ltag = 0; H->rtag = 0;
     I->ltag = 0; I->rtag = 0;
 
+// TODO: 根据前序和中序遍历序列构造二叉树
+// TODO: 根据后序和中序遍历序列构造二叉树
+
     cout<<endl;
 
-    createInTread(A);
-    inTreadTravelling(A);
+    createPreThread(A);
+    preThreadTravelling(A);
 
     cout<<endl;
 

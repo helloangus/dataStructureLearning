@@ -1,4 +1,4 @@
-#include "../include/include.h"
+#include "stackAndQueue.h"
 #include "../include/define.h"
 
 /* 中缀转后缀，s2为结果栈，top2为栈顶指针 */

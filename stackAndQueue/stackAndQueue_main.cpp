@@ -1,4 +1,4 @@
-#include "../include/include.h"
+#include "stackAndQueue.h"
 #include "../include/define.h"
 
 int main()

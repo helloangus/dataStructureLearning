@@ -1,4 +1,4 @@
-#include "../include/include.h"
+#include "treeAndBinarytree.h"
 #include "../include/define.h"
 
 void prefixOrderNonrecursion(BTNode *p)
@@ -63,7 +63,7 @@ void infixOrderNonrecursion(BTNode *p)
                 q = q->lchild;
             }
             
-            // 内层循环结束后，当栈不空时（某结点不可能只有右孩子，如果有右孩子则必有左孩子，这样该结点就必在栈中）
+            // 内层循环结束后，当栈不空时
             if (top != -1)
             {
                 // 出栈栈顶结点
