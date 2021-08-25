@@ -176,7 +176,7 @@ void PreThread(TBTNode *p, TBTNode *&pre)
             p->lchild = pre;
             p->ltag = 1;
         }
-        // 若前驱结点存在且其右孩子指针空，建立前驱节点的后继线索
+        // 若前驱结点存在且其右孩子指针空，建立前驱结点的后继线索
         if (pre != NULL && pre->rchild == NULL)
         {
             pre->rchild = p;

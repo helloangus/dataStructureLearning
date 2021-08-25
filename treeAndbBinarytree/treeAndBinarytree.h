@@ -26,3 +26,5 @@ void createPreThread(TBTNode *root);
 void preThreadTravelling(TBTNode *root);
 
 void createPostThread(TBTNode *root);
+
+BTNode *creatBT(bool isPostfix, char preOrPostfix[], char infix[]);
