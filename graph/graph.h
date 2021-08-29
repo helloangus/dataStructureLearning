@@ -60,3 +60,4 @@ int Prim(MGraph *g, int v0);
 int Kruskal(MGraph *g);
 
 void Dijkstra(MGraph *g, int v0);
+void Floyd(MGraph *g);

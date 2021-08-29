@@ -8,7 +8,7 @@ int main()
     generateaGraph(aGraph, mGraph);
 
     cout<<endl;
-    Dijkstra(mGraph, 3);
+    Floyd(mGraph);
     cout<<endl;
 
 }
