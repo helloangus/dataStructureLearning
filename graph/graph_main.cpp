@@ -42,9 +42,40 @@ int main()
     testGraph->adjList[4].firstArc->adjvex = 3;
     testGraph->adjList[4].firstArc->nextArc = NULL;
 
+
+    MGraph *mGraph = (MGraph *)malloc(sizeof(MGraph));
+    mGraph->n = 5;
+    mGraph->e = 8;
+    for (int i = 0; i < mGraph->n; i++)
+    {
+        mGraph->vex[i].no = i;
+        mGraph->vex[i].info = 'A' + i;    
+    }
+    for (int i = 0; i < mGraph->n; i++)
+    {
+        for (int j = 0; j < mGraph->n; j++)
+        {
+            if (i == j)
+            {
+                mGraph->edges[i][j] = 0;
+            }
+            else
+            {
+                mGraph->edges[i][j] = INF;
+            }
+        }
+        
+    }
+    
+    mGraph->edges[0][1] = 5; mGraph->edges[0][2] = 1; mGraph->edges[0][3] = 2; 
+    mGraph->edges[1][0] = 5; mGraph->edges[1][2] = 3; mGraph->edges[1][4] = 4; 
+    mGraph->edges[2][0] = 1; mGraph->edges[2][1] = 3; mGraph->edges[2][3] = 6; mGraph->edges[2][4] = 2; 
+    mGraph->edges[3][0] = 2; mGraph->edges[3][2] = 6; mGraph->edges[3][4] = 3; 
+    mGraph->edges[4][1] = 4; mGraph->edges[4][2] = 2; mGraph->edges[4][3] = 3; 
+
     cout<<endl;
     
-    BFS_main(testGraph);
+    cout<<Prim(mGraph, 0)<<endl;
 
     cout<<endl;
 
