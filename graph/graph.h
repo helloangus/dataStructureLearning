@@ -50,7 +50,7 @@ typedef struct
 
 #endif
 
-
+void generateaGraph(AGraph *&aGraph, MGraph *&mGraph);
 void visit(VNode *p);
 
 void DFS_main(AGraph *G);
@@ -58,3 +58,5 @@ void BFS_main(AGraph *G);
 
 int Prim(MGraph *g, int v0);
 int Kruskal(MGraph *g);
+
+void Dijkstra(MGraph *g, int v0);

@@ -1,4 +1,4 @@
-stackAndQueue/stackAndQueue_main.exe
-test/test.exe
-treeAndbBinarytree/treeAndBinarytree_main.exe
-graph/graph_main.exe
+stackAndQueue/*.exe
+test/*.exe
+treeAndbBinarytree/*.exe
+graph/*.exe
