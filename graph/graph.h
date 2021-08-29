@@ -57,3 +57,4 @@ void DFS_main(AGraph *G);
 void BFS_main(AGraph *G);
 
 int Prim(MGraph *g, int v0);
+int Kruskal(MGraph *g);

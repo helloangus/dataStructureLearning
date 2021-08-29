@@ -75,7 +75,7 @@ int main()
 
     cout<<endl;
     
-    cout<<Prim(mGraph, 0)<<endl;
+    cout<<Kruskal(mGraph)<<endl;
 
     cout<<endl;
 
