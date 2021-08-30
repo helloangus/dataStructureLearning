@@ -35,5 +35,5 @@ void DFS(AGraph *G, int visitMark[], int v)
         p = p->nextArc;
     }
     
-    
+    /* 若在此处使用visit函数，则输出的是逆拓扑排序序列 */
 }

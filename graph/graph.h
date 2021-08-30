@@ -18,6 +18,8 @@ typedef struct ArcNode
 typedef struct
 {
     char data;      // 顶点信息
+    int inputCount;     // 统计顶点当前入度
+    int outputCount;    // 统计顶点当前出度
     ArcNode *firstArc;  // 指向第一条边的指针
 }VNode;
 
@@ -50,8 +52,10 @@ typedef struct
 
 #endif
 
-void generateaGraph(AGraph *&aGraph, MGraph *&mGraph);
+void generateaGraph(AGraph *&aGraph_undirected, MGraph *&mGraph_undirected, AGraph *&aGraph_directed);
 void visit(VNode *p);
+void inputStatistic(AGraph *g);
+void outputStatistic(AGraph *g);
 
 void DFS_main(AGraph *G);
 void BFS_main(AGraph *G);
@@ -61,3 +65,4 @@ int Kruskal(MGraph *g);
 
 void Dijkstra(MGraph *g, int v0);
 void Floyd(MGraph *g);
+int topSort(AGraph *g);
