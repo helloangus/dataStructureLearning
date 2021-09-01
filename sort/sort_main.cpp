@@ -9,7 +9,7 @@ int main()
 
     cout<<endl;
 
-    bubbleSort(array, n);
+    heapSort(array, n-1);
     for (int i = 0; i < n; i++)
     {
         cout<<array[i]<<" ";
