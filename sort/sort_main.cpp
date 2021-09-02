@@ -9,7 +9,7 @@ int main()
 
     cout<<endl;
 
-    heapSort(array, n-1);
+    mergeSort(array, n);
     for (int i = 0; i < n; i++)
     {
         cout<<array[i]<<" ";

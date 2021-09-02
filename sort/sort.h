@@ -19,3 +19,6 @@ void quickSort(int array[], int n);
 /* 选择类排序 */
 void simpleSelectSort(int array[], int n);
 void heapSort(int array[], int n);
+
+/* 二路归并排序 */
+void mergeSort(int array[], int n);
